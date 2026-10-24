@@ -16,8 +16,9 @@
 <div class="card">
   <strong>Kısaca:</strong> Istaka senden hiçbir kişisel veri toplamaz. Hesap
   yoktur, reklam ve analiz aracı yoktur. Fotoğrafların ve oyunların yalnızca
-  senin telefonunda işlenir ve saklanır. Android'de metin tanıma kütüphanesi
-  Google'a anonim teknik ölçümler gönderebilir (aşağıda).
+  senin telefonunda işlenir ve saklanır. Android'de Google'ın metin tanıma ve
+  satın alma kütüphaneleri Google'a teknik tanılama ölçümleri gönderir
+  (aşağıda).
 </div>
 
 <h2>Kamera ve fotoğraflar</h2>
@@ -51,15 +52,23 @@ Mağazaların kendi gizlilik politikaları geçerlidir.</p>
 <h2>İnternet bağlantısı</h2>
 <p>Istaka internetsiz çalışır. İnternet mağazadan fiyat bilgisini almak ve
 satın alma yapmak için kullanılır.</p>
-<p><strong>Android:</strong> Taşları okuyan Google ML Kit metin tanıma
-kütüphanesi, internet varsa Google'a teşhis ve kullanım ölçümleri gönderir:
-cihaz üreticisi ve modeli, işletim sistemi sürümü, uygulamanın paket adı ve
-sürümü, tanımanın ne kadar sürdüğü, hata kodları gibi. Fotoğraf, okunan taşlar
-ya da seni tanımlayan bir bilgi gönderilmez. Google bu verileri üçüncü
-taraflarla paylaşmadığını ve aktarırken şifrelediğini belirtir
-(<a href="https://developers.google.com/ml-kit/android-data-disclosure">ML Kit veri açıklaması</a>).
-iPhone'da bu iş Apple'ın cihaz üstü Vision özelliğiyle yapılır ve böyle bir
-gönderim yoktur.</p>
+<p><strong>Android:</strong> Uygulamanın içindeki iki Google kütüphanesi,
+internet varsa Google'a teşhis ve kullanım ölçümleri gönderir:</p>
+<ul>
+  <li><strong>Google ML Kit metin tanıma</strong> (taşları okur): cihaz
+    üreticisi ve modeli, işletim sistemi sürümü, uygulamanın paket adı ve
+    sürümü, tanımanın ne kadar sürdüğü, hata kodları ve bu kurulum için
+    oluşturulan bir tanımlayıcı
+    (<a href="https://developers.google.com/ml-kit/android-data-disclosure">ML Kit veri açıklaması</a>).</li>
+  <li><strong>Google Play Faturalandırma</strong> (satın alma): satın alma
+    işleminin sonucu, süreler, kütüphane ve uygulama sürümü, cihaz bilgileri.</li>
+</ul>
+<p>Bu ölçümler fotoğraf, okunan taşlar, oyunlar ya da adın, e-postan gibi
+kişisel bilgiler içermez. Google bunları aktarırken şifreler ve ML Kit
+verilerini üçüncü taraflarla paylaşmadığını belirtir. Biz bu verileri görmeyiz.
+Google Play'deki "Veri güvenliği" bölümü de bunu belirtir. iPhone'da taş
+okuma Apple'ın cihaz üstü Vision özelliğiyle yapılır ve böyle bir gönderim
+yoktur.</p>
 
 <h2>Çocuklar</h2>
 <p>Istaka çocuklardan bilerek veri toplamaz; zaten kimseden veri toplamaz.</p>
@@ -81,9 +90,10 @@ toplamaya başlayacak bir değişiklik olursa önce uygulamada açıkça sorulur
 <p lang="en">Istaka collects no personal data. There are no accounts, ads,
 analytics or tracking. Photos are processed on the device (Apple Vision on
 iOS, the bundled Google ML Kit model on Android) and are never uploaded. On
-Android, the ML Kit library may send Google diagnostic and usage metrics
-(device model, OS and app version, performance and error codes), but no
-photos, recognized tiles or identifying information.
+Android, Google's ML Kit and Play Billing libraries send Google diagnostic and
+usage metrics (device model, OS and app version, performance, error codes and a
+per-install identifier), but no photos, recognized tiles, games or personal
+details such as name or email.
 Games, scores and learned tile samples stay on the device. An optional,
 off-by-default setting keeps confirmed scans on the device; they leave it only
 if the user exports them through the share sheet. Purchases are handled by the
